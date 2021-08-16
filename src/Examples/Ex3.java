@@ -1,4 +1,6 @@
-public class ThirdExample {
+package Examples;
+
+public class Ex3 {
     public static void main(String[] args) {
         try {
             System.out.println("0");

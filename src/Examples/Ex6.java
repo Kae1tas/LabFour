@@ -10,11 +10,11 @@ public class Ex6 {
             throw new NullPointerException("ошибка");
         } catch (ArithmeticException e) {
             System.out.println("1");
+        } catch (RuntimeException e) {     //потомок
+            System.out.println("2");
         } catch (Exception e) {     //предок
             System.out.println("3");
         }
-        } catch (RuntimeException e) {      //потомок
-            System.out.println("2");
         System.out.println("3");
     }
 }

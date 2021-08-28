@@ -5,7 +5,7 @@ public class Ex12 {
         if (str == null) {
             throw new IllegalArgumentException("Строка введена неверно");
         }
-        if (chislo == 0.001) {
+        if (chislo > 0.001) {
             throw new IllegalArgumentException("Неверное число");
         }
     }
@@ -14,3 +14,6 @@ public class Ex12 {
         m(null,0.000001);
     }
 }
+/* Метод main вызывает метод m(null, 0.000001), которая при str равном null
+"бросает" исключение (созданный экземпляр IllegalArgumentException) - строка введена неверно.
+ */

@@ -9,8 +9,7 @@ public class Ex2Var7Methods {
 
     public static byte[] masLengthInput() {
         try {
-            byte[] mas = new byte[sc.nextByte()];
-            return mas;
+            return new byte[sc.nextByte()];
         } catch (NegativeArraySizeException e) {
             System.out.println("Отрицательный размер массива");
             return new byte[0];
@@ -21,7 +20,7 @@ public class Ex2Var7Methods {
     }
 
 
-    public static byte[] enter(byte mas[]) {
+    public static byte[] enter(byte[] mas) {
         try {
             if (mas.length == 0) {
                 System.exit(1);

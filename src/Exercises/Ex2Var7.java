@@ -7,7 +7,7 @@ public class Ex2Var7 {
         Scanner sc = new Scanner(System.in);
         try {
             byte l = sc.nextByte();
-            byte mas[] = new byte[l];
+            byte[] mas = new byte[l];
             byte max = -128;
             byte maxIndex = 0;
             for (byte i = 0; i < l; i++) {

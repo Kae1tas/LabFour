@@ -30,23 +30,30 @@ public class Ex2Var7Methods {
                 mas[i] = sc.nextByte();
             }
         } catch (InputMismatchException e) {
-            System.out.println("Выход за пределы от -128 до 127 или несоответствие типу byte");
+            System.out.println("Несоответствие типу byte (выход за пределы от -128 до 127" + "\nили ввод неверных знаков (требуется ввод целых чисел)");
             //System.exit(1);
         }
         return mas;
     }
 
     public static byte findMax(byte[] mas) {
-        byte max = -128;
         byte maxIndex = 0;
-        for (byte i = 0; i < mas.length; i++) {
-            if (mas[i] > max) {
-                max = mas[i];
-                maxIndex = i;
+        try {
+            byte max = -128;
+            for (byte i = 0; i < mas.length; i++) {
+                if (mas[i] > max) {
+                    max = mas[i];
+                    maxIndex = i;
+                }
             }
+            if (max < 0)
+                throw new ArithmeticException("Ошибка");
+            maxIndex++;
+            System.out.println("Наибольшее число:" + max);
+        } catch (ArithmeticException e){
+            System.out.println("Нет положительных чисел");
+            System.exit(1);
         }
-        maxIndex++;
-        System.out.println("Наибольшее число:" + max);
         return maxIndex;
     }
 

@@ -15,7 +15,8 @@ public class Ex2Var7Methods {
             System.out.println("Отрицательный размер массива");
             return new byte[0];
         } catch (InputMismatchException e) {
-            System.out.println("Несоответствие типу byte (выход за пределы от -128 до 127" + "\nили ввод неверных знаков (требуется ввод целых чисел)");
+            System.out.println("Несоответствие типу byte (выход за пределы от -128 до 127" +
+                    "\nили ввод неверных знаков (требуется ввод целых чисел)");
             return new byte[0];
         }
     }
@@ -30,7 +31,8 @@ public class Ex2Var7Methods {
                 mas[i] = sc.nextByte();
             }
         } catch (InputMismatchException e) {
-            System.out.println("Несоответствие типу byte (выход за пределы от -128 до 127" + "\nили ввод неверных знаков (требуется ввод целых чисел)");
+            System.out.println("Несоответствие типу byte (выход за пределы от -128 до 127" +
+                    "\nили ввод неверных знаков (требуется ввод целых чисел)");
             //System.exit(1);
         }
         return mas;
@@ -56,6 +58,7 @@ public class Ex2Var7Methods {
         }
         return maxIndex;
     }
+
 
     public static void main(String[] args) {
         byte[] mas = enter(masLengthInput());

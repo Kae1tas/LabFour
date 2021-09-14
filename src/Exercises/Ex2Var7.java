@@ -18,6 +18,7 @@ public class Ex2Var7 {
                     maxIndex = i;
                 }
             }
+
             if (max < 0)
                 throw new ArithmeticException("Ошибка");
             maxIndex++;
